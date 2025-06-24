@@ -7,7 +7,7 @@ export default function TaskList({ category }) {
   return (
     <div className='category-group'>
       <h3>{category.name}</h3>
-      <ul>
+      <ul className='task-list'>
         {category.tasks.map((task, index) => (
           <li key={index}>
             <input type="checkbox" checked={task.done} onChange={() => toggleTask(category.name, index)} />
